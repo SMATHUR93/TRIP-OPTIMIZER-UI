@@ -31,10 +31,14 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMuEMiBJZE75aQj5KXCu_FbNTdxA9WBJg&libraries=places"></script>
 
 		<!-- Angular app file -->
-		<script src="webContent/app.js"></script>
+		<script src="app/app.js"></script>
 
 		<!-- Angular directive for autocomplete of search -->
 		<script src="libs/angularjs-google-maps.js"></script>
+
+		<!-- Google map with callback to plot polyline -->
+		<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNzudxWQmZi5hC3nHE2w8e0HPwg1sgOSw&callback=myMap"></script> -->
+
 	</head>
 	<body>
 
@@ -53,7 +57,14 @@
 		        <span>{{ apiStatus }}</span>
 		    </div> -->
 		    
-		    <form name="searchForm" novalidate 
+		    <error-message></error-message>
+		    <places-search-combo></places-search-combo>
+		    <source-and-destination-combos></source-and-destination-combos>
+		    <location-cards-carousals-container></location-cards-carousals-container>
+		    <output-optimization-map></output-optimization-map>
+		    <output-path-tiles></output-path-tiles>
+
+		    <!-- <form name="searchForm" novalidate 
 		    ng-submit="search()">
 		        <div class="input-group">
 		            <input name="place" type="text" gm-places-autocomplete ng-model="searchPlace" class="form-control"  required autofocus />
@@ -64,9 +75,9 @@
 		        </div>
 		    </form>
 
-		    <hr></hr>
+		    <hr></hr> -->
 
-		    <form name="tripDetailsForm" class="form-horizontal" novalidate 
+		    <!-- <form name="tripDetailsForm" class="form-horizontal" novalidate 
 		    ng-submit="send()">
 		        <div class="form-group">
 		            <label for="sourceField" class="col-xs-2 control-label">Source</label>
@@ -84,11 +95,11 @@
 		        </div>
 		    </form>
 
-		    <hr></hr>
+		    <hr></hr> -->
 
 
 		    <!-- Start: Location Cards -->	
-		    <section class="container p-t-3">
+		    <!-- <section class="container p-t-3">
 			    <div class="row">
 			        <div class="col-lg-12">
 			            <h1>Category 1 Cards</h1>
@@ -188,7 +199,7 @@
 			            </div>
 			        </div>
 			    </div>
-			</section>
+			</section> -->
 		    <!-- End: Location Cards -->
 
 
@@ -243,4 +254,5 @@
 		    
 		})(jQuery);
 	</script>
+	
 </html>

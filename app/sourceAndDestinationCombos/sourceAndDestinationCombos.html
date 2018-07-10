@@ -1,0 +1,19 @@
+<form name="tripDetailsForm" class="form-horizontal" novalidate 
+		    ng-submit="send()">
+    <div class="form-group">
+        <label for="sourceField" class="col-xs-2 control-label">Source</label>
+        <div class="col-xs-10">
+            <input name="sourceField" type="text" class="form-control" 
+            ng-model="place.source" required />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="destinationField" class="col-xs-2 control-label">Destination</label>
+        <div class="col-xs-10">
+            <input name="destinationField" type="text" class="form-control" 
+            ng-model="place.destination" required />
+        </div>
+    </div>
+</form>
+
+<hr></hr>
